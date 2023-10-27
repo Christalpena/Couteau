@@ -22,6 +22,12 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import GenderPrediction from './components/Genero';
+import GeneroPage from './pages/GeneroPage';
+import EdadPage from './pages/DeterminarEdadPage';
+import UniversidadesPage from './pages/UniversidadesPage';
+import ClimaPage from './pages/ClimaPage';
+import AcercaDePage from './pages/AcercaDePage';
 
 setupIonicReact();
 
@@ -33,10 +39,28 @@ const App: React.FC = () => {
           <Menu />
           <IonRouterOutlet id="main">
             <Route path="/" exact={true}>
-              <Redirect to="/folder/Inbox" />
+              <Redirect to="/folder/Herramientas" />
             </Route>
             <Route path="/folder/:name" exact={true}>
               <Page />
+            </Route>
+            <Route path="/page/Genero" exact={true}>
+              < GeneroPage/>
+            </Route>
+            <Route path="/page/Determinar_edad" exact={true}>
+              < EdadPage/>
+            </Route>            
+            <Route path="/page/Universidades" exact={true}>
+              < UniversidadesPage/>
+            </Route>            
+            <Route path="/page/Genero" exact={true}>
+              < GeneroPage/>
+            </Route>
+            <Route path="/page/Clima" exact={true}>
+              < ClimaPage/>
+            </Route>
+            <Route path="/page/Acerca_de" exact={true}>
+              < AcercaDePage/>
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>
